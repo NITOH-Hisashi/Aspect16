@@ -21,8 +21,11 @@ function updateDisplay() {
     `アスペクト比（長辺=16とした場合）: 16 : ${normalizedShortRounded}`;
 }
 
-// 初回表示
-updateDisplay();
+// DOMが読み込まれてから実行
+document.addEventListener("DOMContentLoaded", () => {
+  // 初回表示
+  updateDisplay();
 
-// ウィンドウサイズ変更時に更新
-window.addEventListener("resize", updateDisplay);
+  // ウィンドウサイズ変更時に更新
+  window.addEventListener("resize", updateDisplay);
+});
