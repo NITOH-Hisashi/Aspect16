@@ -3,6 +3,7 @@ function updateDisplay() {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
+  // 解像度表示
   document.getElementById("resolution").textContent = `画面解像度: ${width} x ${height}`;
 
   // アスペクト比を長辺=16として計算
