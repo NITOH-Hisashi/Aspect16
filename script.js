@@ -2,6 +2,8 @@ function updateDisplay() {
   // 画面の幅と高さを取得
   const width = window.innerWidth;
   const height = window.innerHeight;
+  console.log(`${width} x ${height}`);
+
 
   // 解像度表示
   document.getElementById("resolution").textContent = `画面解像度: ${width} x ${height}`;
