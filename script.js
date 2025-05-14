@@ -1,4 +1,5 @@
 function updateDisplay() {
+  // 画面の幅と高さを取得
   const width = window.innerWidth;
   const height = window.innerHeight;
 
