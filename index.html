@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画面情報</title>
+</head>
+<body>
+  <h1>画面情報</h1>
+  <p id="resolution"></p>
+  <p id="aspectRatio"></p>
+
+  <script>
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // 解像度表示
+    document.getElementById("resolution").textContent = `画面解像度: ${width} x ${height}`;
+
+    // アスペクト比を長辺=16として換算
+    let longSide = Math.max(width, height);
+    let shortSide = Math.min(width, height);
+
+    // 実際の比率
+    const ratio = longSide / shortSide;
+
+    // 長辺を16としたときの短辺
+    const normalizedShort = 16 / ratio;
+
+    // 小数第2位まで丸め
+    const normalizedShortRounded = Math.round(normalizedShort * 100) / 100;
+
+    document.getElementById("aspectRatio").textContent = `アスペクト比（長辺=16とした場合）: 16 : ${normalizedShortRounded}`;
+  </script>
+</body>
+</html>
